@@ -80,14 +80,14 @@ class BaseClient:
         """
         url = self.get_url(endpoint, version)
 
-        params_to_send = {"api_token": self.api_token}
+        params_to_send = {}
         if query_params:
             filtered_query_params = {
                 k: v for k, v in query_params.items() if v is not None
             }
             params_to_send.update(filtered_query_params)
 
-        headers = {}
+        headers = {"x-api-token": self.api_token}
         if json_payload:
             headers["Content-Type"] = "application/json"
 

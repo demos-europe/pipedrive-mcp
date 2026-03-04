@@ -1,1 +1,26 @@
+# Credentials & Secrets
 .env
+.env.*
+!.env.example
+
+# Git history (könnte alte Secrets enthalten)
+.git
+.gitignore
+
+# Python cache & build artifacts
+__pycache__
+*.pyc
+*.pyo
+.pytest_cache
+.venv
+*.egg-info
+
+# Dev-only Verzeichnisse (nicht in Production nötig)
+PRPs
+scripts
+ai_docs
+
+# Docs & Meta
+README.md
+MIGRATION_GUIDE.md
+CLAUDE.md
